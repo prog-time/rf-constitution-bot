@@ -35,7 +35,7 @@ class BotUser extends Model
                     'id_telegram' => $dataUser['id_telegram'] ?? $telegramID,
                     'firstname' => $dataUser['firstname'] ?? "",
                     'lastname' => $dataUser['lastname'] ?? "",
-                    'lastname' => $dataUser['username'] ?? "",
+                    'username' => $dataUser['username'] ?? "",
                     'study_status' => 0,
                     'created_at' => date('d.m.Y H:i'),
                     'updated_at' => date('d.m.Y H:i'),

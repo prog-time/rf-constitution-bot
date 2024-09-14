@@ -23,7 +23,7 @@ class Favorite extends Model
      * @param int $idArticle - id записи
      * @return object
      */
-    public static function changeFavorite(int $telegramID, int $idArticle): object
+    public static function changeFavorite(int $telegramID, int $idArticle): ?object
     {
         $favoriteData = static::where('id_telegram', $telegramID)->first();
 
@@ -61,7 +61,7 @@ class Favorite extends Model
      * @param int $telegramID - id Telegram пользователя
      * @return object
      */
-    public static function getFavorite(int $telegramID): object
+    public static function getFavorite(int $telegramID): ?object
     {
         $favoriteData = Favorite::where('id_telegram', $telegramID)->first();
         if (!empty($favoriteData)) {

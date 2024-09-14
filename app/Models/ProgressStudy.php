@@ -23,7 +23,7 @@ class ProgressStudy extends Model
      * @param int $idArticle - id записи
      * @return object
      */
-    public static function changeProgressStudy(int $telegramID, int $idArticle): object
+    public static function changeProgressStudy(int $telegramID, int $idArticle): ?object
     {
         $progressStudyData = static::where('id_telegram', $telegramID)->first();
 
@@ -60,7 +60,7 @@ class ProgressStudy extends Model
      * @param int $telegramID - id Telegram пользователя
      * @return object
      */
-    public static function getProgressStudy(int $telegramID): object
+    public static function getProgressStudy(int $telegramID): ?object
     {
         $progressStudy = ProgressStudy::where('id_telegram', $telegramID)->first();
         if (!empty($progressStudy)) {
